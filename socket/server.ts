@@ -17,11 +17,11 @@ let conNum = 0
 
 // app.use(KoaRoute.get('/', main))
 // 这里配置网站根目录
-const serve = KoaStatic(path.join("I:\\wwwroot"))
+const serve = KoaStatic(path.join("/root/bullet_screen/"))
 
 app.use(serve)
 
-const server = http.createServer(app.callback()).listen(8564, () => {
+const server = http.createServer(app.callback()).listen(80, () => {
     console.log("启动成功");
 })
 
