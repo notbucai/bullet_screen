@@ -6,6 +6,9 @@
 
 只要打开都能获取到时刻留言的弹幕
 
+#更新
+2018-9-12   新增在线人数 且 修改 wwwroot 目录配置方法 直接修改 config.json 中wwwroot项即可
+
 #目录结构
 css
 js app.js 是前端页面的主要js，可以在里面修改
@@ -19,3 +22,4 @@ index.html 静态首页
 
 #演示地址
 http://bullet.ncgame.cc
+
