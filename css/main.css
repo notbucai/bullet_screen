@@ -60,8 +60,17 @@
     left:100%;
     line-height: 40px;
 }
-
-@media screen and (max-width: 500px) {
+.in-show{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    color: #999;
+    
+}
+.in-show span{
+    color: #333;
+}
+@media screen and (max-width: 600px) {
     #send-con{
         padding:0 10px;
         bottom: 40px;

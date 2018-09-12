@@ -34,18 +34,20 @@ $(() => {
     // console.log(torgb());
     // 接收服务器发送的数据
     function accept_fn(data) {
+
         // console.log(data, "1");
-        data = filtr(data)
+        data.data = filtr(data.data)
         // 将数据添加到页面
         addDomShow(data)
     }
     // 添加数据到页面函数
-    function addDomShow(data) {
-        // 获取随机高度,按比例来的40:1
-        let height = (Math.floor(parseInt($("#app").css('height'))-200) / 40)
-        
+    function addDomShow({ data, inSum }) {
+        $(".in-show span").text(inSum);
+
         if (data) {
 
+            // 获取随机高度,按比例来的40:1
+            let height = (Math.floor(parseInt($("#app").css('height')) - 200) / 40)
             let pTag = $(`<p class="run">${data}</p>`)
 
             show.append(pTag)
@@ -55,10 +57,11 @@ $(() => {
             pTag.animate({
                 left: `-${parseInt(pTag.css('width')) + 30}px`,
                 color: torgb(),
-                top: `${(Math.floor(Math.random() * height)) * 40 + 20 }px`
+                top: `${(Math.floor(Math.random() * height)) * 40 + 20}px`
             }, (Math.floor(Math.random() * 20) + 20) * 1000, () => {
                 pTag.remove()
             })
+
         }
     }
     // 连接服务器
